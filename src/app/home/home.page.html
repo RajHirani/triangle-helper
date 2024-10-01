@@ -1,20 +1,54 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <div class="container my-form">
+    <h2 class="form-header text-center mb-4">Triangle Helper</h2>
+    <!-- Loader -->
+    <div class="loader-wrapper" *ngIf="isLoading">
+      <div class="loader"></div>
+    </div>
+    <form [formGroup]="form">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="input1" placeholder="Vehicle Number" formControlName="vehicleNumber">
+        <label for="input1">Vehicle Number</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="input2" placeholder="Lat,Long" formControlName="latLng">
+        <label for="input2">Lat,Long</label>
+      </div>
+      <button type="button" class="btn btn-gradient w-100" (click)="fetchDetails()">Fetch Details</button>
+      <button type="button" class="btn btn-gradient w-100" (click)="updateDetails()">Update Location</button>
+    </form>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div class="table-responsive mt-5">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Row 1, Col 1</td>
+            <td>Row 1, Col 2</td>
+          </tr>
+          <tr>
+            <td>Row 2, Col 1</td>
+            <td>Row 2, Col 2</td>
+          </tr>
+          <tr>
+            <td>Row 3, Col 1</td>
+            <td>Row 3, Col 2</td>
+          </tr>
+          <tr>
+            <td>Row 4, Col 1</td>
+            <td>Row 4, Col 2</td>
+          </tr>
+          <tr>
+            <td>Row 5, Col 1</td>
+            <td>Row 5, Col 2</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </ion-content>
