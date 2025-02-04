@@ -14,8 +14,8 @@ import TcpSocket from 'react-native-tcp-socket';
 import moment from 'moment';
 import DeviceInfo from 'react-native-device-info';
 import axios from 'axios';
-const GOOGLE_SHEET_ID = '1tCZFUUv9fJCXzQe6Kp5FgLqqQzkNi0Kldr9e1M2p7CI';
-const GOOGLE_API_KEY = 'AIzaSyDKLm6u1h9LPhU_BHQ9HqmFdjrfJMpzzlY';
+const GOOGLE_SHEET_ID ="e1M2p7CI";
+const GOOGLE_API_KEY = '';
 
 function App(): React.JSX.Element {
 
